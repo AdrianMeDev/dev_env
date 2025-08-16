@@ -1,0 +1,39 @@
+# Tokyo Night Alacritty Theme - Custom Variation
+
+[colors.primary]
+background = '#011628'
+foreground = '#CBE0F0'
+
+[colors.cursor]
+text = '#011628'
+cursor = '#CBE0F0'
+
+[colors.selection]
+text = '#CBE0F0'
+background = '#275378'
+
+# Normal colors
+[colors.normal]
+black   = '#011423'
+red     = '#f7768e'
+green   = '#9ece6a'
+yellow  = '#e0af68'
+blue    = '#7aa2f7'
+magenta = '#bb9af7'
+cyan    = '#7dcfff'
+white   = '#B4D0E9'
+
+# Bright colors
+[colors.bright]
+black   = '#627E97'
+red     = '#f7768e'
+green   = '#9ece6a'
+yellow  = '#e0af68'
+blue    = '#7aa2f7'
+magenta = '#bb9af7'
+cyan    = '#7dcfff'
+white   = '#CBE0F0'
+
+[colors.indexed_colors]
+- { index = 16, color = '#ff9e64' }
+- { index = 17, color = '#db4b4b' }
