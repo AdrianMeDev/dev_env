@@ -1,0 +1,293 @@
+{
+  "editor.formatOnSave": true,
+  "editor.suggest.insertMode": "replace",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.linkedEditing": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0.5,
+  "launch": {},
+  "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "update.showReleaseNotes": false,
+  "zenMode.hideLineNumbers": false,
+  "editor.lineNumbers": "relative",
+  "workbench.activityBar.location": "hidden",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "workbench.colorTheme": "Rosé Pine",
+  "go.toolsManagement.autoUpdate": true,
+
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Space>"],
+      "commands": ["whichkey.show"]
+    },
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // NICE TO HAVE
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["leader", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["leader", "d"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    // yank to system clipboard
+    {
+      "before": ["leader", "y"],
+      "commands": ["editor.action.clipboardCopyAction"]
+    },
+    {
+      "before": ["leader", "Y"],
+      "commands": ["editor.action.clipboardCopyWithSyntaxHighlightingAction"]
+    },
+    // paste from system clipboard
+    {
+      "before": ["leader", "p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    },
+    {
+      "before": ["leader", "P"],
+      "commands": ["editor.action.clipboardPasteFromSyntaxHighlightingAction"]
+    },
+    // harpoon config
+    {
+      "before": ["leader", "h", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["leader", "h", "o"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
+    },
+    {
+      "before": ["leader", "h", "e"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["leader", "h", "1"],
+      "commands": ["vscode-harpoon.goToEditor1"]
+    },
+    {
+      "before": ["leader", "h", "2"],
+      "commands": ["vscode-harpoon.goToEditor2"]
+    },
+    {
+      "before": ["leader", "h", "3"],
+      "commands": ["vscode-harpoon.goToEditor3"]
+    },
+    {
+      "before": ["leader", "h", "4"],
+      "commands": ["vscode-harpoon.goToEditor4"]
+    },
+    {
+      "before": ["leader", "h", "5"],
+      "commands": ["vscode-harpoon.goToEditor5"]
+    },
+    {
+      "before": ["leader", "h", "6"],
+      "commands": ["vscode-harpoon.goToEditor6"]
+    },
+    {
+      "before": ["leader", "h", "7"],
+      "commands": ["vscode-harpoon.goToEditor7"]
+    },
+    {
+      "before": ["leader", "h", "8"],
+      "commands": ["vscode-harpoon.goToEditor8"]
+    },
+    {
+      "before": ["leader", "h", "9"],
+      "commands": ["vscode-harpoon.goToEditor9"]
+    },
+    // project manager config
+    {
+      "before": ["leader", "p", "a"],
+      "commands": ["projectManager.saveProject"]
+    },
+    {
+      "before": ["leader", "p", "o"],
+      "commands": ["projectManager.listProjectsNewWindow"]
+    },
+    {
+      "before": ["leader", "p", "e"],
+      "commands": ["projectManager.editProjects"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<space>"],
+      "commands": ["whichkey.show"]
+    },
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+    {
+      "before": ["leader", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": ["leader", "d"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    // yank to system clipboard
+    {
+      "before": ["leader", "y"],
+      "commands": ["editor.action.clipboardCopyAction"]
+    },
+    {
+      "before": ["leader", "Y"],
+      "commands": ["editor.action.clipboardCopyWithSyntaxHighlightingAction"]
+    },
+    // paste from system clipboard
+    {
+      "before": ["leader", "p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    },
+    {
+      "before": ["leader", "P"],
+      "commands": ["editor.action.clipboardPasteFromSyntaxHighlightingAction"]
+    },
+    // harpoon config
+    {
+      "before": ["leader", "h", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["leader", "h", "o"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
+    },
+    {
+      "before": ["leader", "h", "e"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["leader", "h", "1"],
+      "commands": ["vscode-harpoon.goToEditor1"]
+    },
+    {
+      "before": ["leader", "h", "2"],
+      "commands": ["vscode-harpoon.goToEditor2"]
+    },
+    {
+      "before": ["leader", "h", "3"],
+      "commands": ["vscode-harpoon.goToEditor3"]
+    },
+    {
+      "before": ["leader", "h", "4"],
+      "commands": ["vscode-harpoon.goToEditor4"]
+    },
+    {
+      "before": ["leader", "h", "5"],
+      "commands": ["vscode-harpoon.goToEditor5"]
+    },
+    {
+      "before": ["leader", "h", "6"],
+      "commands": ["vscode-harpoon.goToEditor6"]
+    },
+    {
+      "before": ["leader", "h", "7"],
+      "commands": ["vscode-harpoon.goToEditor7"]
+    },
+    {
+      "before": ["leader", "h", "8"],
+      "commands": ["vscode-harpoon.goToEditor8"]
+    },
+    {
+      "before": ["leader", "h", "9"],
+      "commands": ["vscode-harpoon.goToEditor9"]
+    },
+    // project manager config
+    {
+      "before": ["leader", "p", "a"],
+      "commands": ["projectManager.saveProject"]
+    },
+    {
+      "before": ["leader", "p", "o"],
+      "commands": ["projectManager.listProjectsNewWindow"]
+    },
+    {
+      "before": ["leader", "p", "e"],
+      "commands": ["projectManager.editProjects"]
+    }
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
